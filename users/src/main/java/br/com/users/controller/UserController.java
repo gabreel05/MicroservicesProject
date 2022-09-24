@@ -19,12 +19,12 @@ public class UserController {
     private final UserRepository userRepository;
 
     @Autowired
-    private final VehicleService vehicleService;
+    private final VehicleController vehicleController;
 
     @Autowired
-    public UserController(UserRepository userRepository, VehicleService vehicleService) {
+    public UserController(UserRepository userRepository, VehicleController vehicleController) {
         this.userRepository = userRepository;
-        this.vehicleService = vehicleService;
+        this.vehicleController = vehicleController;
     }
 
     @GetMapping
@@ -32,7 +32,7 @@ public class UserController {
         List<User> users = userRepository.findAll();
 
         users.forEach(user -> {
-            VehicleResponse vehicle = vehicleService.findByUserId(user.getId());
+            VehicleResponse vehicle = vehicleController.findByUserId(user.getId());
 
             user.setVehicle(vehicle);
         });
@@ -47,5 +47,14 @@ public class UserController {
         URI uri = uriComponentsBuilder.path("/api/users/{id}").buildAndExpand(u.getId()).toUri();
 
         return ResponseEntity.created(uri).body(u);
+    }
+
+    @GetMapping("/vehicles/{id}")
+    public ResponseEntity<User> findByVehicleId(@PathVariable Long id) {
+        VehicleResponse vehicle = vehicleController.findById(id);
+
+        User u = userRepository.findByVehicleId(vehicle.getId());
+
+        return ResponseEntity.ok(u);
     }
 }

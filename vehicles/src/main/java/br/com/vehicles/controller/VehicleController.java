@@ -9,6 +9,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/vehicles")
@@ -26,6 +27,13 @@ public class VehicleController {
         List<Vehicle> vehicles = vehicleRepository.findAll();
 
         return ResponseEntity.ok(vehicles);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Vehicle> findById(@PathVariable Long id) {
+        Optional<Vehicle> vehicle = vehicleRepository.findById(id);
+
+        return vehicle.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PostMapping

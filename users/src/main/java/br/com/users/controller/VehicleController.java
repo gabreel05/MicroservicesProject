@@ -9,9 +9,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 @FeignClient("vehicles")
-public interface VehicleService {
+public interface VehicleController {
 
     @GetMapping("/api/vehicles/users/{userId}")
     @Bean
     VehicleResponse findByUserId(@PathVariable Long userId);
+
+    @GetMapping("/api/vehicles/{id}")
+    VehicleResponse findById(@PathVariable Long id);
 }
