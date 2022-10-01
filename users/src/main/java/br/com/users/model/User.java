@@ -31,9 +31,6 @@ public class User implements UserDetails {
     @NonNull
     private String password;
 
-    @Transient
-    private VehicleResponse vehicle;
-
     @ManyToMany(fetch = FetchType.EAGER)
     private List<Profile> profiles = new ArrayList<>();
 
