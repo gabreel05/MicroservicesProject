@@ -6,8 +6,12 @@
         <option value="$PROJECT_DIR$/users/pom.xml" />
         <option value="$PROJECT_DIR$/services/pom.xml" />
         <option value="$PROJECT_DIR$/vehicles/pom.xml" />
+        <option value="$PROJECT_DIR$/../Produtos_Spring/pom.xml" />
+        <option value="$PROJECT_DIR$/../Spring-products-CRUD/pom.xml" />
+        <option value="$PROJECT_DIR$/../endereco/pom.xml" />
+        <option value="$PROJECT_DIR$/demands/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-19" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK" />
 </project>

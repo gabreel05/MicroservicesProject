@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/MicroservicesProject.iml" filepath="$PROJECT_DIR$/.idea/MicroservicesProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demands/demands.iml" filepath="$PROJECT_DIR$/demands/demands.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../endereco/endereco.iml" filepath="$PROJECT_DIR$/../endereco/endereco.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Spring-products-CRUD/products.iml" filepath="$PROJECT_DIR$/../Spring-products-CRUD/products.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Produtos_Spring/produtos_ms.iml" filepath="$PROJECT_DIR$/../Produtos_Spring/produtos_ms.iml" />
       <module fileurl="file://$PROJECT_DIR$/services/services.iml" filepath="$PROJECT_DIR$/services/services.iml" />
       <module fileurl="file://$PROJECT_DIR$/users/users.iml" filepath="$PROJECT_DIR$/users/users.iml" />
       <module fileurl="file://$PROJECT_DIR$/vehicles/vehicles.iml" filepath="$PROJECT_DIR$/vehicles/vehicles.iml" />
